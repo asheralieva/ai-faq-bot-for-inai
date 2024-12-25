@@ -1,6 +1,10 @@
 {
   "General questions": [
     [
+      "Where is located INAI?",
+      "Timiryazeva, 74"
+    ],
+    [
       "What should I do if I didn't receive the access to my personal cabinet in the mail?",
       "Login data is sent to all those who have specified e-mail. In case you have not received an e-mail with the data:\n1) check SPAM;\n2) contact the dean's office e-mail dekanat@mmu.ru with your full name and field of study - the information will be sent to you by reply e-mail."
     ],
@@ -92,6 +96,164 @@
     [
       "How do I change my phone number in the system?",
       "To change your data, go to the nearest PCS with your passport and fill out a data change application."
+    ],
+    [
+      "What should I do if I didn't receive the access to my personal cabinet in the mail?",
+      "Login data is sent to all those who have specified e-mail. In case you have not received an e-mail with the data:\n1) check SPAM;\n2) contact the dean's office e-mail dekanat@mmu.ru with your full name and field of study - the information will be sent to you by reply e-mail."
+    ],
+    [
+      "How to proceed if the email with login credentials didn’t come?",
+      "What steps to take if the access to my personal cabinet wasn’t sent to me?",
+      "Login data is sent to all those who have specified e-mail. In case you have not received an e-mail with the data:\n1) check SPAM;\n2) contact the dean's office e-mail dekanat@mmu.ru with your full name and field of study - the information will be sent to you by reply e-mail."
+    ],
+    [
+      "What steps to take if the access to my personal cabinet wasn’t sent to me?",
+      "Login data is sent to all those who have specified e-mail. In case you have not received an e-mail with the data:\n1) check SPAM;\n2) contact the dean's office e-mail dekanat@mmu.ru with your full name and field of study - the information will be sent to you by reply e-mail."
+    ],
+    [
+      "where can i see the schedule?",
+      "You can find it on the official website in the “Students” section.\nTo view the schedule, go to the tab Students - Schedule - Bachelor's degree, and use the login information to enter the schedule"
+    ],
+    [
+      "How to find the timetable for my classes?",
+      "You can find it on the official website in the “Students” section.\nTo view the schedule, go to the tab Students - Schedule - Bachelor's degree, and use the login information to enter the schedule"
+    ],
+    [
+      "Where is the schedule located for students?",
+      "You can find it on the official website in the “Students” section.\nTo view the schedule, go to the tab Students - Schedule - Bachelor's degree, and use the login information to enter the schedule"
+    ],
+    [
+      "Where can I apply for a student ID card, credit book, academic debts, application for changing the direction of training, form of education, name, passport data, expulsion, discount on training, installment, refusal to study elective disciplines, etc.?",
+      "In the unified dean's office - 308 office."
+    ],
+    [
+      "What is a call-out certificate?",
+      "Part-time education in the implementation of the labor code 171 and 173 articles provides for study leave for those who combine study with work.\nFor part-time students, these are periods of accrual, a week from September 28, and winter and summer periods of 2-3 weeks.\nPart-time students are entitled to such leave only during interim certification, winter and summer sessions.\nYou order a certificate-call, and your employer will have to provide you with paid study leave for this period.\nIn order to order a certificate-call, you need to write to the dean's office mail your full name, direction of training and the name of the organization."
+    ],
+    [
+      "Where to address if my phone number has changed?",
+      "To change your data, go to the nearest PCS with your passport and fill out a data change application."
+    ],
+    [
+      "How do I change my phone number in the system?",
+      "To change your data, go to the nearest PCS with your passport and fill out a data change application."
+    ],
+    [
+      "What is the procedure to obtain a scholarship?",
+      "To receive a scholarship, you must achieve a high score on the state exam (ORT) and submit your application to the scholarship department."
+    ],
+    [
+      "How can I qualify for a government scholarship?",
+      "To receive a scholarship, you must achieve a high score on the state exam (ORT) and submit your application to the scholarship department."
+    ],
+    [
+      "What are the requirements for receiving a scholarship?",
+      "To receive a scholarship, you must achieve a high score on the state exam (ORT) and submit your application to the scholarship department."
+    ],
+    [
+      "How do I apply for a library membership?",
+      "Library membership can be obtained by visiting the library with your student ID card and filling out a membership form."
+    ],
+    [
+      "What is needed to register for the library?",
+      "Library membership can be obtained by visiting the library with your student ID card and filling out a membership form."
+    ],
+    [
+      "Where can I register for access to library resources?",
+      "Library membership can be obtained by visiting the library with your student ID card and filling out a membership form."
+    ],
+    [
+      "How to change my academic advisor?",
+      "To change your academic advisor, you need to submit a formal request to the dean's office stating the reason for the change."
+    ],
+    [
+      "What is the process to switch academic advisors?",
+      "To change your academic advisor, you need to submit a formal request to the dean's office stating the reason for the change."
+    ],
+    [
+      "Can I request a new academic advisor?",
+      "To change your academic advisor, you need to submit a formal request to the dean's office stating the reason for the change."
+    ],
+    [
+      "How do I appeal a grade I received?",
+      "Grade appeals can be filed by submitting a formal application to the examination committee within two weeks of the grade being published."
+    ],
+    [
+      "What is the process for contesting a grade?",
+      "Grade appeals can be filed by submitting a formal application to the examination committee within two weeks of the grade being published."
+    ],
+    [
+      "Where do I submit a grade appeal?",
+      "Grade appeals can be filed by submitting a formal application to the examination committee within two weeks of the grade being published."
+    ],
+    [
+      "What documents are needed to transfer to another university?",
+      "To transfer to another university, you will need a transcript of records, an application for transfer, and any other documents required by the receiving institution."
+    ],
+    [
+      "How can I transfer to a different university?",
+      "To transfer to another university, you will need a transcript of records, an application for transfer, and any other documents required by the receiving institution."
+    ],
+    [
+      "What is the procedure for transferring universities?",
+      "To transfer to another university, you will need a transcript of records, an application for transfer, and any other documents required by the receiving institution."
+    ],
+    [
+      "How do I request a duplicate diploma?",
+      "Duplicate diplomas can be requested at the registrar's office by filling out a formal application and providing identification."
+    ],
+    [
+      "What steps are needed to obtain a duplicate diploma?",
+      "Duplicate diplomas can be requested at the registrar's office by filling out a formal application and providing identification."
+    ],
+    [
+      "Where can I apply for a diploma replacement?",
+      "Duplicate diplomas can be requested at the registrar's office by filling out a formal application and providing identification."
+    ],
+    [
+      "How to apply for admission to the institute?",
+      "To apply to the institute, complete the application process on the official website or contact the admissions office."
+    ],
+    [
+      "How much does the contract cost?",
+      "The cost of the contract is 100,000 som."
+    ],
+    [
+      "Does the institute accept foreign students?",
+      "Yes, the institute accepts foreign students."
+    ],
+
+    [
+      "Does the institute accept international students?",
+      "Yes, the institute accepts foreign students."
+    ],
+    [
+      "Are there any benefits for disabled people or single mothers?",
+      "No, there are no benefits for disabled people or single mothers."
+    ],
+    [
+      "Is there a correspondence course available?",
+      "No, the institute does not offer a correspondence course."
+    ],
+    [
+      "is it possible to study by correspondence?",
+      "No, the institute does not offer a correspondence course."
+    ],
+    [
+      "What faculties does the institute offer?",
+      "The institute offers the following faculties: Program Technologies (AIN), Web Informatics (WIN), and Applied Data Analysis (DIN)."
+    ],
+    [
+      "Does the institute have a canteen?",
+      "No, the institute does not have a canteen."
+    ],
+    [
+      "are there any clubs at INAI?",
+      "Yes, there is a club for those who organize events, a club for those who promote the university and a club for charity work"
+    ],
+    [
+      "What documents are required for admission?",
+      "Documents required for admission:\n\n- Certificate of ORT (minimum score 110)\n- High school diploma\n- 2 copies of passport\n- 6 photos (3x4) with full name on the back\n- Conscription certificate (original or copy)"
     ]
   ],
   "Study": [
@@ -178,6 +340,54 @@
     [
       "How do I transfer to a different supervisor?",
       "Apply to the Dean's Office, indicating the reason for the change and prior approval of the new supervisor."
+    ],
+    [
+      "Are classes going to use physical journals?",
+      "Yes, of course."
+    ],
+    [
+      "Can students take notes digitally during lectures?",
+      "Yes, of course."
+    ],
+    [
+      "where the admissions office is located",
+      "on the third floor, room 308"
+    ],
+    [
+      "Is the time of the first class always the same?",
+      "The first pair starts at 9:00, but the actual pairings will be according to your schedule."
+    ],
+    [
+      "What is the maximum number of absences allowed?",
+      "No more than a third of the total number of classes."
+    ],
+    [
+      "How many absences are permitted without penalty?",
+      "No more than a third of the total number of classes."
+    ],
+    [
+      "What is the attendance requirement for students?",
+      "No more than a third of the total number of classes."
+    ],
+    [
+      "What happens if I miss a class?",
+      "The process of making up missed classes is negotiated individually with the teacher."
+    ],
+    [
+      "What should I do if I miss a class?",
+      "The process of making up missed classes is negotiated individually with the teacher."
+    ],
+    [
+      "What is the English language placement process?",
+      "In all courses except Linguistics, students take a language proficiency test. Based on the results, you are assigned to groups according to your language level."
+    ],
+    [
+      "I am not showing up in my foreign language teacher's journal, what should I do?",
+      "Write your name to the e-mail: a.saprykina@inai.kg.\nMethodists will correct everything."
+    ],
+    [
+      "Where can I see my attendance?",
+      "You can view your attendance in the student's personal profile, under Help, then Logs."
     ]
   ],
   "Exams": [

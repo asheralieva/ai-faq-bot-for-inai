@@ -44,13 +44,6 @@ def get_answer(user_query):
 
 # Django view
 
-# def faq_view(request):
-#     if request.method == "POST":
-#         user_input = request.POST.get("question", "")
-#         response = get_answer(user_input)
-#         return JsonResponse({"response": response})
-#     return render(request, "faq/index.html")
-
 def faq_view(request):
     if request.method == "POST":
         # Получаем вопрос от пользователя
