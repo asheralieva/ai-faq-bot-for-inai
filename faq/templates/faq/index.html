@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap');
+
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-width: 1110px;
+            background-color: #8fcece;
+            font-family: "Montserrat", sans-serif;
+            padding: 12px 0 12px 0;
+        }
+
+        li {
+            margin-top: 15px;
+        }
+
+        .container{
+            background-color: white;
+            border-radius: 20px;
+            padding: 11px 8px;
+        }
+        h1{
+            text-align: center;
+        }
+        input{
+            padding: 3px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>FAQ Bot</h1>
+
+    <!-- Форма для ввода вопроса -->
+    <form method="post">
+        {% csrf_token %}
+        <label for="question">Ваш вопрос:</label>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">Задать вопрос</button>
+    </form>
+
+    <h2>История вопросов и ответов:</h2>
+    <ul>
+        {% for qa in history %}
+            <li>
+                <strong>Вопрос:</strong> {{ qa.question }} <br>
+                <strong>Ответ:</strong> {{ qa.answer }} <br>
+                <small>{{ qa.created_at|date:"d.m.Y H:i" }}</small>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
