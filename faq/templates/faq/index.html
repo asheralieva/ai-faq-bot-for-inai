@@ -11,9 +11,22 @@
             display: flex;
             align-items: center;
             flex-direction: column;
-            background-color: #8fcece;
+            background-color: #034040;
             font-family: "Montserrat", sans-serif;
             padding: 12px 0 12px 0;
+            color: #001313;
+        }
+
+        .image{
+            position: absolute;
+            left: 0;
+            width: 400px;
+        }
+
+        .image1{
+            position: absolute;
+            right: 0;
+            width: 400px;
         }
 
         li {
@@ -22,8 +35,8 @@
         }
 
         .container {
-        {#background-color: white;#} background-color: rgba(255, 255, 255, 0.5);
-            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(1px);
             -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 11px 8px;
@@ -36,28 +49,31 @@
 
         input {
             padding: 3px;
+            border: 1px solid #034040;
             border-radius: 10px;
         }
 
         .btn-ask {
-            background-color: #a6d3d3;
+            background-color: #bee8e8;
             padding: 8px;
             border-radius: 20px;
-            border: 1px solid #23d5d5;
+            border: 1px solid #034040;
         }
     </style>
 </head>
 <body>
+    <img class="image" src="../../static/inai-logo.png"/>
+    <img class="image1" src="../../static/inai-logo.png"/>
+
 <div class="container">
     <h1>FAQ Bot for INAI</h1>
-
     <!-- Форма для ввода вопроса -->
     <form method="post">
         {% csrf_token %}
         <label for="question">Your question:</label>
         <div style="display: flex; align-items: center; gap: 10px;">
             <input type="text" id="question" name="question" required>
-            <button type="button" id="voice-input-btn">🎙️</button>
+            <button type="button" class="btn-ask" id="voice-input-btn">🎙️</button>
             <button type="submit" class="btn-ask">Ask question</button>
         </div>
     </form>
