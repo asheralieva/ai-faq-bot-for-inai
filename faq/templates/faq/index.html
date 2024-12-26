@@ -18,45 +18,102 @@
 
         li {
             margin-top: 15px;
+            max-width: 750px;
         }
 
-        .container{
-            background-color: white;
+        .container {
+        {#background-color: white;#} background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             border-radius: 20px;
             padding: 11px 8px;
             max-width: 1110px;
         }
-        h1{
+
+        h1 {
             text-align: center;
         }
-        input{
+
+        input {
             padding: 3px;
             border-radius: 10px;
+        }
+
+        .btn-ask {
+            background-color: #a6d3d3;
+            padding: 8px;
+            border-radius: 20px;
+            border: 1px solid #23d5d5;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>FAQ Bot</h1>
+    <h1>FAQ Bot for INAI</h1>
 
     <!-- Форма для ввода вопроса -->
     <form method="post">
         {% csrf_token %}
-        <label for="question">Ваш вопрос:</label>
-        <input type="text" id="question" name="question" required>
-        <button type="submit">Задать вопрос</button>
+        <label for="question">Your question:</label>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <input type="text" id="question" name="question" required>
+            <button type="button" id="voice-input-btn">🎙️</button>
+            <button type="submit" class="btn-ask">Ask question</button>
+        </div>
     </form>
 
-    <h2>История вопросов и ответов:</h2>
+    <h2>Q&A history:</h2>
     <ul>
         {% for qa in history %}
             <li>
-                <strong>Вопрос:</strong> {{ qa.question }} <br>
-                <strong>Ответ:</strong> {{ qa.answer }} <br>
+                <strong>Question:</strong> {{ qa.question }} <br>
+                <strong>Answer:</strong> {{ qa.answer }} <br>
                 <small>{{ qa.created_at|date:"d.m.Y H:i" }}</small>
             </li>
         {% endfor %}
     </ul>
 </div>
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const voiceInputBtn = document.getElementById('voice-input-btn');
+        const questionInput = document.getElementById('question');
+
+        // Проверяем доступность API SpeechRecognition
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (SpeechRecognition) {
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'ru-RU'; // Установим язык на русский
+            recognition.interimResults = false; // Получаем только окончательные результаты
+
+            // Обработка начала распознавания
+            voiceInputBtn.addEventListener('click', () => {
+                recognition.start();
+                voiceInputBtn.textContent = '🎙️ Говорите...';
+            });
+
+            // Обработка успешного распознавания
+            recognition.addEventListener('result', (event) => {
+                const transcript = event.results[0][0].transcript;
+                questionInput.value = transcript; // Заполняем поле ввода текстом
+                voiceInputBtn.textContent = '🎙️';
+            });
+
+            // Обработка завершения распознавания
+            recognition.addEventListener('end', () => {
+                voiceInputBtn.textContent = '🎙️';
+            });
+
+            // Обработка ошибок
+            recognition.addEventListener('error', (event) => {
+                console.error('Ошибка распознавания:', event.error);
+                voiceInputBtn.textContent = '🎙️';
+            });
+        } else {
+            alert('Ваш браузер не поддерживает распознавание речи.');
+            voiceInputBtn.disabled = true;
+        }
+    });
+</script>
+
 </html>
