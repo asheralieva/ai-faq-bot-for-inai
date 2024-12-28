@@ -17,13 +17,13 @@
             color: #001313;
         }
 
-        .image{
+        .image {
             position: absolute;
             left: 0;
             width: 400px;
         }
 
-        .image1{
+        .image1 {
             position: absolute;
             right: 0;
             width: 400px;
@@ -62,8 +62,8 @@
     </style>
 </head>
 <body>
-    <img class="image" src="../../static/inai-logo.png"/>
-    <img class="image1" src="../../static/inai-logo.png"/>
+<img class="image" src="../../static/inai-logo.png"/>
+<img class="image1" src="../../static/inai-logo.png"/>
 
 <div class="container">
     <h1>FAQ Bot for INAI</h1>
@@ -95,40 +95,30 @@
         const voiceInputBtn = document.getElementById('voice-input-btn');
         const questionInput = document.getElementById('question');
 
-        // Проверяем доступность API SpeechRecognition
-        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-        if (SpeechRecognition) {
-            const recognition = new SpeechRecognition();
-            recognition.lang = 'ru-RU'; // Установим язык на русский
-            recognition.interimResults = false; // Получаем только окончательные результаты
+        class VoiceRecognition {
+            constructor(lang = 'ru-RU') {
+                this.recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+                this.recognition.lang = lang;
+            }
 
-            // Обработка начала распознавания
-            voiceInputBtn.addEventListener('click', () => {
-                recognition.start();
-                voiceInputBtn.textContent = '🎙️ Говорите...';
-            });
-
-            // Обработка успешного распознавания
-            recognition.addEventListener('result', (event) => {
-                const transcript = event.results[0][0].transcript;
-                questionInput.value = transcript; // Заполняем поле ввода текстом
-                voiceInputBtn.textContent = '🎙️';
-            });
-
-            // Обработка завершения распознавания
-            recognition.addEventListener('end', () => {
-                voiceInputBtn.textContent = '🎙️';
-            });
-
-            // Обработка ошибок
-            recognition.addEventListener('error', (event) => {
-                console.error('Ошибка распознавания:', event.error);
-                voiceInputBtn.textContent = '🎙️';
-            });
-        } else {
-            alert('Ваш браузер не поддерживает распознавание речи.');
-            voiceInputBtn.disabled = true;
+            start(callback) {
+                this.recognition.addEventListener('result', (event) => {
+                    const transcript = event.results[0][0].transcript;
+                    callback(transcript);
+                    voiceInputBtn.textContent = '🎙️';
+                });
+                this.recognition.start();
+            }
         }
+
+        const voiceRec = new VoiceRecognition();
+        voiceInputBtn.addEventListener('click', () => {
+            voiceRec.start((transcript) => {
+                questionInput.value = transcript; // Заполняем поле ввода
+                voiceInputBtn.textContent = '🎙️'; // Восстанавливаем текст кнопки
+            });
+            voiceInputBtn.textContent = '🎙️ Speak...'; // Устанавливаем текст, пока идет распознавание
+        });
     });
 </script>
 
